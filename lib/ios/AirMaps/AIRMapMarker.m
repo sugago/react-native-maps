@@ -343,9 +343,16 @@ NSInteger const AIR_CALLOUT_OPEN_ZINDEX_BASELINE = 999;
 
 - (void)setZIndex:(NSInteger)zIndex
 {
+    if (zIndex == 2) { 
+        [self setSelected:YES animated:NO];
+    } else {
+        [self setSelected:NO animated:NO];
+    }
+    _zIndex = zIndex;
+    self.layer.zPosition = _zIndex;
     _zIndexBeforeOpen = zIndex;
     _zIndex = _calloutIsOpen ? zIndex + AIR_CALLOUT_OPEN_ZINDEX_BASELINE : zIndex;
-    self.layer.zPosition = zIndex;
+    // self.layer.zPosition = zIndex;
 }
 
 - (void)dealloc {
