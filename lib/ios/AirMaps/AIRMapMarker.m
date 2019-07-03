@@ -351,7 +351,7 @@ NSInteger const AIR_CALLOUT_OPEN_ZINDEX_BASELINE = 999;
     _zIndex = zIndex;
     self.layer.zPosition = _zIndex;
     _zIndexBeforeOpen = zIndex;
-    _zIndex = _calloutIsOpen ? zIndex + AIR_CALLOUT_OPEN_ZINDEX_BASELINE : zIndex;
+    // _zIndex = _calloutIsOpen ? zIndex + AIR_CALLOUT_OPEN_ZINDEX_BASELINE : zIndex;
     // self.layer.zPosition = zIndex;
 }
 
